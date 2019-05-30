@@ -1,0 +1,14 @@
+<h1>Pokemon List</h1>
+<div *ngFor="let pokemon of pokemon.results ; let i = index" [attr.data-index]="i" >
+  <ul>
+    <li>
+      <b>
+        {{i+1}}
+      </b>
+      &nbsp;&nbsp;&nbsp;
+      <b>
+        <a [routerLink]="['/pokemon-detail', pokemon.name]">{{pokemon.name | uppercase}}</a>
+      </b>
+    </li>
+  </ul>
+</div>

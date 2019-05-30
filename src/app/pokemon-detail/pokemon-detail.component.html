@@ -1,0 +1,48 @@
+
+<div class="pokemon-details">
+  <table>
+    <tr>
+      <td>
+          <div class="pokemon-image left-info">
+              <img src="{{pokemon.sprites.front_default}}" alt="">
+            </div>
+            <div >
+              <p class="description">Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. 
+                By soaking up the sun's rays, the seed grows progressively larger.</p>
+            </div>
+            <div class="left-info">
+                <table>
+                  <tr>
+                    <td class="pokemon-details-sub">
+                        <b>Height:</b>&nbsp;{{pokemon.height}}
+                    </td>
+                    <td class="pokemon-details-sub">
+                        <b>Weight:</b>&nbsp;{{pokemon.weight}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="pokemon-details-sub">
+                        <b>Type:&nbsp;</b>
+                        <br>
+                        <br>
+                        <div *ngFor="let type of pokemon.types">{{type.type.name | uppercase}}</div>
+                    </td>
+                    <td class="pokemon-details-sub">
+                        <b>Stats:&nbsp;</b>
+                        <br>
+                        <br>
+                        <div *ngFor="let stat of pokemon.stats"><b>{{stat.stat.name | uppercase}}:</b> &nbsp;{{stat.base_stat}}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+      </td>
+      <td class="pokemon-details-sub">
+          
+        <b>Move List:</b><br><div *ngFor="let moves of pokemon.moves | slice:0:30">{{moves.move.name | uppercase}} &nbsp;</div>
+      </td>
+    </tr>
+  </table>
+
+  
+</div>

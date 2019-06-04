@@ -1,17 +1,14 @@
 
 <div class="pokemon-details">
-  <table>
+  <h1 class="pokemon-name" >{{pokemon.name | uppercase}} No. {{pokemon.id}}</h1>
+  <table class="pokemon-table-main">
     <tr>
-      <td>
-          <div class="pokemon-image left-info">
+      <td><div class="pokemon-image left-info">
               <img src="{{pokemon.sprites.front_default}}" alt="">
             </div>
-            <div >
-              <p class="description">Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. 
-                By soaking up the sun's rays, the seed grows progressively larger.</p>
-            </div>
+            <div *ngFor="let type of pokemon.types" class="pokemon-type">{{type.type.name | uppercase}}</div>
             <div class="left-info">
-                <table>
+                <table class="pokemon-table-sub">
                   <tr>
                     <td class="pokemon-details-sub">
                         <b>Height:</b>&nbsp;{{pokemon.height}}
@@ -21,12 +18,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="pokemon-details-sub">
-                        <b>Type:&nbsp;</b>
-                        <br>
-                        <br>
-                        <div *ngFor="let type of pokemon.types">{{type.type.name | uppercase}}</div>
-                    </td>
+
                     <td class="pokemon-details-sub">
                         <b>Stats:&nbsp;</b>
                         <br>
@@ -44,5 +36,5 @@
     </tr>
   </table>
 
-  
+
 </div>

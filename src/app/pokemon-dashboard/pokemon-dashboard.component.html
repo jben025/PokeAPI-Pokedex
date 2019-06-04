@@ -1,14 +1,14 @@
-<h1>Pokemon List</h1>
-<div *ngFor="let pokemon of pokemon.results ; let i = index" [attr.data-index]="i" >
-  <ul>
-    <li>
-      <b>
-        {{i+1}}
-      </b>
-      &nbsp;&nbsp;&nbsp;
-      <b>
-        <a [routerLink]="['/pokemon-detail', pokemon.name]">{{pokemon.name | uppercase}}</a>
-      </b>
-    </li>
-  </ul>
+
+<div class="pokemon-view">
+	<div class="grid" *ngIf="pokemon">
+		<div class="column" *ngFor="let pokemon of pokemon.results ; let i = index" [attr.data-index]="i" [routerLink]="['/pokemon-detail', pokemon.name]">
+		  <p>{{ pokemon.name | uppercase}}</p>
+		</div>
+	</div>
+</div>
+
+<div>
+	<ul class="pagination">
+			<li *ngFor="let pokemon of pokemon.results ; let count = index" [attr.data-index]="count" ><a [routerLink]="['/pokemon-dashboard/page/', count+1]">{{count+1}}&nbsp;</a></li>
+	</ul>  
 </div>

@@ -1,6 +1,4 @@
 .pokemon-details{
-    background-color: #ff4d4d;
-    border: 5px solid #ff0000;
     border-radius: 65px;
     width: 95%;
     height: 100%;
@@ -12,9 +10,17 @@ div .left-info {
     width: 100%;
 }
 
+.pokemon-name{
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+}
+
 .pokemon-image {
     background-color: white;
-    border: 3px solid black;
+    background-position-x: 0%;
+    background-position-y: 0%; 
+    box-shadow: 0px 6px 10px 1px rgba(36, 37, 38, 0.08);
+    border: 1px solid black;
     text-align: center;
     border-radius: 20px;
 }
@@ -23,35 +29,41 @@ img {
     height: 300px;
 }
 
-.description {
+.pokemon-table-main {
+    width: 70%;
     text-align: center;
-    background-color: white;
-    border: 3px solid black;
-    width: 100%;
-    font-size: 25px;
+    border-spacing: 20px;
     border-radius: 20px;
-    font-family: Arial;
+    margin-left: 15%;
 }
 
-table {
-    width: 96%;
+.pokemon-table-sub {
+    width: 100%;
     text-align: center;
-    border-spacing: 15px;
     border-radius: 20px;
-    margin-left: 2%;
-    margin-top: 2%;
 }
 
 td {
-    width: 50%;
     border-radius: 15px;
 }
 
-.pokemon-details-sub {
-    border: 3px solid #109710;
-    background-color: #33cc33;
-    text-align: left;
+.pokemon-type{
+    margin: 10px 0px 0px 0px;
+    box-shadow: 0px 6px 10px 1px rgba(36, 37, 38, 0.08);
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 15px;
+    text-align: center;
     font-size: 20px;
+}
+
+.pokemon-details-sub {
+    width: 50%;
+    box-shadow: 5px 1px 5px 1px rgba(36, 37, 38, 0.08);
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
 }
 
 .pokemon-options {
@@ -60,3 +72,4 @@ td {
     font-family: Arial;
     text-decoration: none;
 }
+

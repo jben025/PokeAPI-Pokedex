@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 
-import { Pokemon } from './pokemon';
+import { Pokemon, PokemonList } from './pokemon';
 import { MessageService } from './message.service';
 
 @Injectable({
@@ -24,15 +24,17 @@ export class PokemonService {
       }
   
     getPokemons(){
-      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon`);
+      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=0&limit=50`);
     }
+
+  
+    getPokemonsPerPage(page: number){
+      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=${(page-1)*50}&limit=50`);
+    }
+
 
     getDetails(id: string){
       return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon/${id}`);
-    }
-
-    getDescription(url: string){
-      return this.http.get<Pokemon>(`${url}`);
     }
 
 }

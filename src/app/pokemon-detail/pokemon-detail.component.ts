@@ -33,10 +33,6 @@ desc_url = "https://pokeapi.co/api/v2/pokemon-form/15/";
 
   getPokemonDetail(){
     this.pokemonService.getDetails(this.id)
-    .pipe(
-    //    switchMap(any => this.pokemonService.getDescription(this.desc_url))
-    //    .subscribe((data: any) => console.log(this.details = data))
-    )
     .subscribe((data: Pokemon) => console.log(this.pokemon = data))
   }
 

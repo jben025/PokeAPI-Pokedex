@@ -1,0 +1,30 @@
+
+.pokemon-view{
+  margin: 30px 0px 0px 0px;
+}
+
+.grid {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 60%;
+  display: grid;
+  grid-auto-rows: 120px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.column {
+  text-align: center;
+  padding-top: 25px;
+  font-family: "Calibri", Arial, monospace;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  box-shadow: 0px 6px 10px 1px rgba(36, 37, 38, 0.08);
+}
+
+.pagination, li{
+  display: inline;
+}

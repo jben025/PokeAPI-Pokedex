@@ -1,11 +1,11 @@
 export class Pokemon {
     count: number;
     next: string;
-    results: SubArray;
+    results: Array;
     constructor (
         count: number,
         next: string,
-        results: SubArray
+        results: Array
     ) {
         this.count = count;
         this.next = next;
@@ -13,7 +13,7 @@ export class Pokemon {
     }
 }
 
-export class SubArray {
+export class Array {
     name: string;
     url: string;
 
@@ -23,5 +23,12 @@ export class SubArray {
     ) {
         this.name = name;
         this.url = url;
+
     }
+}
+
+export class PokemonList {
+    name: string;
+    id: number;
+    url: string;
 }

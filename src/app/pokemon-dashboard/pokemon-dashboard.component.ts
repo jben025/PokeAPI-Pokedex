@@ -19,7 +19,6 @@ import { Pokemon } from '../pokemon';
 export class PokemonDashboardComponent implements OnInit {
 
   pokemon: Pokemon;
-  pokemonList: any;
   sub: any;
   page = 0;
 
@@ -43,17 +42,12 @@ export class PokemonDashboardComponent implements OnInit {
 
   getPokemonList(){
     this.pokemonService.getPokemons()
-    .subscribe((data: Pokemon) => console.log(this.pokemon = {
-      count: data['count'],
-      next: data['next'],
-      results: data['results']
-    }))
+    .subscribe((data: Pokemon) => console.log(this.pokemon = data))
   }
 
   getPokemonListPerPage(){
     this.pokemonService.getPokemonsPerPage(this.page)
     .subscribe((data: Pokemon) => console.log(this.pokemon = data))
   }
-
 
 }

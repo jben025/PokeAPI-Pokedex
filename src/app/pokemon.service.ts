@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
-import { Observable, throwError } from 'rxjs';
-
-import { Pokemon, PokemonList } from './pokemon';
+import { Pokemon } from './pokemon';
 import { MessageService } from './message.service';
 
 @Injectable({
@@ -27,11 +25,9 @@ export class PokemonService {
       return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=0&limit=50`);
     }
 
-  
     getPokemonsPerPage(page: number){
       return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=${(page-1)*50}&limit=50`);
     }
-
 
     getDetails(id: string){
       return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon/${id}`);

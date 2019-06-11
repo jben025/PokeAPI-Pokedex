@@ -1,0 +1,289 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190611.130726.13276.0.001.json",
+    "dumpEventTime": "2019-06-11T13:07:26Z",
+    "dumpEventTimeStamp": "1560229646423",
+    "processId": 13276,
+    "cwd": "C:\\Users\\jaysie\\pokedex-v1",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:/Users/jaysie/AppData/Roaming/npm/node_modules/@angular/cli/bin/ng",
+      "serve"
+    ],
+    "nodejsVersion": "v12.2.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.2.0",
+      "v8": "7.4.288.21-node.17",
+      "uv": "1.28.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.3",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.2.0/node-v12.2.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.2.0/node-v12.2.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.2.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.17134",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "host": "DESKTOP-S40M7E6"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff723cb4e09",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+9161"
+    },
+    {
+      "pc": "0x00007ff723cb8764",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23844"
+    },
+    {
+      "pc": "0x00007ff723cb7785",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+19781"
+    },
+    {
+      "pc": "0x00007ff723d9f9ab",
+      "symbol": "uv_loop_fork+47931"
+    },
+    {
+      "pc": "0x00007ff7240d71fe",
+      "symbol": "v8::internal::Parser::ReportMessageAt+206"
+    },
+    {
+      "pc": "0x00007ff7240ab27a",
+      "symbol": "v8::internal::wasm::StreamingDecoder::NotifyCompilationEnded+666"
+    },
+    {
+      "pc": "0x00007ff7241416bc",
+      "symbol": "v8::internal::Heap::CreateFillerObjectAt+2972"
+    },
+    {
+      "pc": "0x00007ff72414943f",
+      "symbol": "v8::internal::LocalEmbedderHeapTracer::NotifyV8MarkingWorklistWasEmpty+5391"
+    },
+    {
+      "pc": "0x00007ff72413faa3",
+      "symbol": "v8::internal::Heap::CollectGarbage+1235"
+    },
+    {
+      "pc": "0x00007ff72413e1a4",
+      "symbol": "v8::internal::GCTracer::AddScopeSample+1316"
+    },
+    {
+      "pc": "0x00007ff72417edd3",
+      "symbol": "v8::internal::Factory::NewFillerObject+67"
+    },
+    {
+      "pc": "0x00007ff7244a57d6",
+      "symbol": "v8::internal::OptimizingCompileDispatcher::Unblock+116966"
+    },
+    {
+      "pc": "0x00007ff724940366",
+      "symbol": "v8::internal::NativesCollection<0>::GetScriptsSource+660214"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 331493376,
+    "totalCommittedMemory": 331493376,
+    "usedMemory": 318167808,
+    "availableMemory": 1879495856,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 524288,
+        "capacity": 523976,
+        "used": 31712,
+        "available": 492264
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047952,
+        "used": 1047856,
+        "available": 96
+      },
+      "old_space": {
+        "memorySize": 269606912,
+        "committedMemory": 269606912,
+        "capacity": 269052960,
+        "used": 259920464,
+        "available": 9132496
+      },
+      "code_space": {
+        "memorySize": 4358144,
+        "committedMemory": 4358144,
+        "capacity": 3907200,
+        "used": 3713024,
+        "available": 194176
+      },
+      "map_space": {
+        "memorySize": 9441280,
+        "committedMemory": 9441280,
+        "capacity": 9385352,
+        "used": 7078400,
+        "available": 2306952
+      },
+      "large_object_space": {
+        "memorySize": 45891584,
+        "committedMemory": 45891584,
+        "capacity": 45826048,
+        "used": 45826048,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550304,
+        "used": 550304,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047952,
+        "used": 0,
+        "available": 1047952
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 18.281,
+    "kernelCpuSeconds": 3.031,
+    "cpuConsumptionPercent": 5.46462,
+    "maxRss": 600530944,
+    "pageFaults": {
+      "IORequired": 368304,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 5988,
+      "writes": 11
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\jaysie\\AppData\\Roaming",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-S40M7E6",
+    "COMSPEC": "C:\\WINDOWS\\system32\\cmd.exe",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOME": "C:\\Users\\jaysie",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\jaysie",
+    "LANG": "en_US.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\jaysie\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-S40M7E6",
+    "MSYSTEM": "MINGW64",
+    "NUMBER_OF_PROCESSORS": "6",
+    "OS": "Windows_NT",
+    "OneDrive": "C:\\Users\\jaysie\\OneDrive",
+    "PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\jaysie\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs;C:\\Users\\jaysie\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\jaysie\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\jaysie\\AppData\\Roaming\\npm",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e0a",
+    "PROGRAMFILES": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "C:/Users/jaysie/pokedex-v1",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "SESSIONNAME": "Console",
+    "SHLVL": "2",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\jaysie\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.35.0",
+    "TMP": "C:\\Users\\jaysie\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-S40M7E6",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-S40M7E6",
+    "USERNAME": "jaysie",
+    "USERPROFILE": "C:\\Users\\jaysie",
+    "WINDIR": "C:\\WINDOWS",
+    "_": "C:/Program Files/nodejs/node"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\winmmbase.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\WINDOWS\\System32\\fwpuclnt.dll"
+  ]
+}

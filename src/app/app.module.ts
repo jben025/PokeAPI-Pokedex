@@ -6,17 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
-import { MessageComponent } from './message/message.component';
 import { PokemonService } from './pokemon.service';
 import { PokemonDashboardComponent } from './pokemon-dashboard/pokemon-dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PokemonImageComponent } from './pokemon-image/pokemon-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonDetailComponent,
-    MessageComponent,
-    PokemonDashboardComponent
+    PokemonDashboardComponent,
+    PokemonImageComponent
   ],
   imports: [
     BrowserModule,

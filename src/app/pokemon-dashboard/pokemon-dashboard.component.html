@@ -1,8 +1,9 @@
 
 <div class="pokemon-view">
 	<div class="grid" *ngIf="pokemon">
-		<div class="column" *ngFor="let pokemon of pokemon.results ; let i = index" [attr.data-index]="i" [routerLink]="['/pokemon-detail', pokemon.name]">
-		  <p>{{ pokemon.name | uppercase}}</p>
+		<div class="column pokelink" *ngFor="let pokemon of pokemon.results ; let i = index" [attr.data-index]="i" [routerLink]="['/pokemon-detail', pokemon.name]">
+		  <p >{{ pokemon.name | uppercase}}</p>
+			<app-pokemon-image [pokemon]="pokemon.name" class="poke-image"></app-pokemon-image>
 		</div>
 	</div>
 </div>

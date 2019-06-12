@@ -18,7 +18,6 @@ export class PokemonImageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log("Name: "+ this.pokemon_name)
     this.getPokemonSprite(this.pokemon_name)
   }
 

@@ -10,13 +10,15 @@ import { PokemonService } from './pokemon.service';
 import { PokemonDashboardComponent } from './pokemon-dashboard/pokemon-dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PokemonImageComponent } from './pokemon-image/pokemon-image.component';
+import { PokemonPageComponent } from './pokemon-page/pokemon-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonDetailComponent,
     PokemonDashboardComponent,
-    PokemonImageComponent
+    PokemonImageComponent,
+    PokemonPageComponent
   ],
   imports: [
     BrowserModule,

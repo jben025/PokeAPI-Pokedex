@@ -30,14 +30,16 @@ export class PokemonDashboardComponent implements OnInit {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => { this.page = +params["page"]; // (+) converts string 'id' to a number
     console.log("page: " + this.page)
-    
+
     if (this.page >= 1){
       this.getPokemonListPerPage();
     }else{
       this.getPokemonList();
     }
-    
+
     });
+
+
   }
 
   getPokemonList(){
@@ -47,7 +49,7 @@ export class PokemonDashboardComponent implements OnInit {
 
   getPokemonListPerPage(){
     this.pokemonService.getPokemonsPerPage(this.page)
-    .subscribe((data: Pokemon) => console.log(this.pokemon = data))
+    .subscribe((data: Pokemon) => (this.pokemon = data))
   }
 
 }

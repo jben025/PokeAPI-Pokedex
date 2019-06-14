@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Pokemon } from './pokemon';
-import { MessageService } from './message.service';
+import { Pokemon, PokemonDetails } from './pokemon';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,25 +12,29 @@ export class PokemonService {
   private pokemonUrl = "https://pokeapi.co/api/v2";
 
   constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
+    private http: HttpClient) { }
 
     pokemon: Pokemon;
+    pokemonDetails: PokemonDetails;
 
-    private log( message: string ){
-      this.messageService.add(`PokemonService: ${message}`);
-      }
-  
-    getPokemons(){
-      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=0&limit=50`);
+    getAllPokemons(){
+      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=0&limit=999`);
     }
 
-    getPokemonsPerPage(page: number){
-      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=${(page-1)*50}&limit=50`);
+    getAllPokemonCount(offset: number){
+      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=0&limit=${offset}`);
+    }
+
+    getPokemons(offset:number): Observable<Pokemon>{
+      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=0&limit=${offset}`);
+    }
+
+    getPokemonsPerPage(page: number, offset: number): Observable<Pokemon>{
+      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon?offset=${(page-1)*offset}&limit=${offset}`);
     }
 
     getDetails(id: string){
-      return this.http.get<Pokemon>(`${this.pokemonUrl}/pokemon/${id}`);
+      return this.http.get<PokemonDetails>(`${this.pokemonUrl}/pokemon/${id}`);
     }
 
 }

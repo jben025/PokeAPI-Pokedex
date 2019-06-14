@@ -4,13 +4,14 @@
 }
 
 .grid {
+  text-align: center;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0px auto;
   width: 60%;
   display: grid;
-  grid-auto-rows: 200px;
+  grid-auto-rows: 220px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 25px;
 }
 
 .column {
@@ -28,10 +29,7 @@
 
 .column:hover{
   opacity: 1;
-  background-color: gray;
+  background-image: -webkit-linear-gradient(90deg, azure 20%, #ff3333 100%);
+  border: 5px solid #ff3333;
   color: white;
-}
-
-.pagination, li{
-  display: inline;
 }

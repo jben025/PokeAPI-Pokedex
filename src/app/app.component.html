@@ -1,9 +1,17 @@
 <body >
-	<h1>{{title}}</h1>
-	<nav>
-		<a href="/pokemon-dashboard">Pokemon</a>
-		<a href="/item">Items</a>
-		<a href="/berry">Berries</a>
-	</nav>
+	<ul>
+		<li>
+				<p class="stroke title">{{title}}</p>
+		</li>
+	</ul>
 	<router-outlet></router-outlet>
 </body>
+
+<footer>
+		<div class="pokeapi">
+			<p>
+					Powered By:<br>
+					<img src="https://pokeapi.co/static/logo-6221638601ef7fa7c835eae08ef67a16.png" alt="" class="pokeapi-logo">
+			</p>
+		</div>
+</footer>

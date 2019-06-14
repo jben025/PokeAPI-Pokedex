@@ -2,9 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-//Modules
-
-
 //Services
 import { PokemonService } from '../pokemon.service';
 
@@ -18,6 +15,7 @@ import { Pokemon } from '../pokemon';
 })
 export class PokemonDashboardComponent implements OnInit {
 
+  offset = 30;
   pokemon: Pokemon;
   sub: any;
   page = 0;
@@ -32,24 +30,23 @@ export class PokemonDashboardComponent implements OnInit {
     console.log("page: " + this.page)
 
     if (this.page >= 1){
-      this.getPokemonListPerPage();
+      this.getPokemonListPerPage(this.page, this.offset);
     }else{
-      this.getPokemonList();
+      this.getPokemonList(this.offset);
     }
 
     });
-
-
+    
   }
 
-  getPokemonList(){
-    this.pokemonService.getPokemons()
+  getPokemonList(offset:number){
+    this.pokemonService.getPokemons(offset)
     .subscribe((data: Pokemon) => console.log(this.pokemon = data))
   }
 
-  getPokemonListPerPage(){
-    this.pokemonService.getPokemonsPerPage(this.page)
-    .subscribe((data: Pokemon) => (this.pokemon = data))
+  getPokemonListPerPage(page: number, offset: number){
+    this.pokemonService.getPokemonsPerPage(page, offset)
+    .subscribe((data: Pokemon) => console.log(this.pokemon = data))
   }
 
 }

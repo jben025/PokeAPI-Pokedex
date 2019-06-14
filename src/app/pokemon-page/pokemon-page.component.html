@@ -1,9 +1,17 @@
-<p>
-  pokemon-page works!
-  count: {{count}}
-  tmp_page: {{tmp_page}}
-  total_page: {{total_page}}
-</p>
+<div>
+    <ul class="pagination">
+        <li [routerLink]="['/pokemon-dashboard/page/', 0]" [className]="checkDisabledPrev(0)" >&lt;&lt;</li>
+        <li [routerLink]="['/pokemon-dashboard/page/', page-1]" [className]="checkDisabledPrev(page-1)" >&lt;</li>
 
+        <li *ngFor="let page_number of createPagination() | slice:0+checkPagePrev():checkPageNext(); 
+          let count = index" 
+          [attr.data-index]="count" 
+          [routerLink]="['/pokemon-dashboard/page/', page_number]"
+          [className]="checkDisabled(page_number)">
+            {{page_number}}
+        </li>
 
-<div *ngFor="let i of pageArray | slice:0:10">page {{i}} &nbsp;</div>
+        <li [routerLink]="['/pokemon-dashboard/page/', page+1]" [className]="checkDisabledNext(page+1)">&gt;</li>
+        <li [routerLink]="['/pokemon-dashboard/page/', total_page]" [className]="checkDisabledNext(total_page)">&gt;&gt;</li>
+    </ul>  
+  </div>

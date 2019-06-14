@@ -2,11 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
 
-import { switchMap } from 'rxjs/operators';
-
 import { PokemonService } from '../pokemon.service';
 
-import { Pokemon } from '../pokemon';
+import { PokemonDetails } from '../pokemon';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -15,11 +13,11 @@ import { Pokemon } from '../pokemon';
 })
 export class PokemonDetailComponent implements OnInit {
 
-pokemon: Pokemon;
+pokemon: PokemonDetails;
 details: any;
 sub: any;
 id: string;
-desc_url = "https://pokeapi.co/api/v2/pokemon-form/15/";
+default_sprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png";
 
   constructor(
     private pokemonService: PokemonService,
@@ -27,13 +25,13 @@ desc_url = "https://pokeapi.co/api/v2/pokemon-form/15/";
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => { this.id = params["id"]; // (+) converts string 'id' to a number
-    this.getPokemonDetail();
+    this.getPokemonDetail(this.id);
    });
   }
 
-  getPokemonDetail(){
-    this.pokemonService.getDetails(this.id)
-    .subscribe((data: Pokemon) => console.log(this.pokemon = data))
+  getPokemonDetail(id: string){
+    this.pokemonService.getDetails(id)
+    .subscribe((data: PokemonDetails) => console.log(this.pokemon = data))
   }
 
   ngOnDestroy() {

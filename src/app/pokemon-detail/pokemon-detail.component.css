@@ -11,6 +11,8 @@ div .left-info {
 }
 
 .pokemon-name{
+    font-size: 50px;
+    font-family: Arial;
     text-align: center;
     margin: 50px 0px 0px 0px;
 }
@@ -20,13 +22,14 @@ div .left-info {
     background-position-x: 0%;
     background-position-y: 0%; 
     box-shadow: 0px 6px 10px 1px rgba(36, 37, 38, 0.08);
-    border: 1px solid black;
+    border: 3px solid black;
     text-align: center;
     border-radius: 20px;
+    background-image: -webkit-radial-gradient(azure 20%, #ff3333 100%);;
 }
 
 img {
-    height: 300px;
+    height: 350px;
 }
 
 .pokemon-table-main {
@@ -45,25 +48,220 @@ img {
 
 td {
     border-radius: 15px;
+    font-family: Arial;
+}
+
+.pokemon-details-sub {
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
 }
 
 .pokemon-type{
+    display:block;
+    text-decoration: none;
+    border: 3px solid black;
+}
+
+.poison{
+    color:white;
     margin: 10px 0px 0px 0px;
-    box-shadow: 0px 6px 10px 1px rgba(36, 37, 38, 0.08);
-    border: 1px solid black;
     padding: 3px;
+    background-color: #b84dff;
+    border: 3px solid #9900ff;
     border-radius: 15px;
     text-align: center;
     font-size: 20px;
 }
 
-.pokemon-details-sub {
-    width: 50%;
-    box-shadow: 5px 1px 5px 1px rgba(36, 37, 38, 0.08);
-    border: 1px solid black;
-    padding: 10px;
-    text-align: left;
-    font-size: 15px;
+.grass{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #00e64d;
+    border: 3px solid #00cc44;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.bug{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #3dc76b;
+    background-image: -webkit-radial-gradient(#3dc76b 50%, #6200a3 100%);
+    border: 3px solid #6200a3;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.dark{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #292829;
+    border: 3px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.dragon{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #0dc9e2;
+    border: 3px solid #0086bb;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.flying{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-image: -webkit-repeating-radial-gradient(top left, circle, #00e6e6, rgb(151, 241, 241) 15%, #00e6e6 20%);
+    border: 3px solid #00e6e6;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.electric{
+    color:black;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #ffff33;
+    border: 3px solid #e6e600;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.fairy{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #ff66b3;
+    border: 3px solid #ff3399;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.fighting{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #ff7733;
+    border: 3px solid #ff5500;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.fire{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-image: -webkit-repeating-radial-gradient(left, circle, #ff1a1a 50%, #ff5c33 60%, #ff9933 55%);
+    border: 3px solid #ff1a1a;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.ghost{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-image: -webkit-radial-gradient(#583d8d 50%, #661aff 80%);
+    border: 3px solid #661aff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.ground{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-image: -webkit-repeating-radial-gradient(bottom center, circle, #994d00 60%, #e67300 70%, #ffbf80 80%);
+    border: 3px solid #994d00;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.rock{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #cc6600;
+    border: 3px solid #994d00;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.ice{
+    color:black;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #b3ffff;
+    border: 3px solid #80ffff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.normal{
+    color:black;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-color: #c2c2a3;
+    border: 3px solid #adad85;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.psychic{
+    color:black;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-image: -webkit-repeating-radial-gradient(top center, circle, #e600ac 60%, #ff4dd2 70%, #ffccf2 80%);
+    border: 3px solid #e600ac;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.steel{
+    color:white;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-image: -webkit-radial-gradient(#85adad 50%, #5c8a8a 100%);
+    border: 3px solid #5c8a8a;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.water{
+    color:black;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    background-image: -webkit-repeating-radial-gradient(center, circle, DeepSkyBlue 60%, #66d9ff 70%, #ccf2ff 80%);
+    border: 3px solid DeepSkyBlue;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
 }
 
 .pokemon-options {
@@ -73,3 +271,26 @@ td {
     text-decoration: none;
 }
 
+.pokemonMenu{
+    font-size: 40px;
+    font-family: Arial;
+}
+
+.grid {
+    text-align: center;
+    max-width: 100%;
+    padding: 20px 0px 20px 0px;
+    margin: 0px auto;
+    width: 20%;
+    display: grid;
+    grid-auto-rows: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    border-radius: 30px;
+    background-color: white;
+    border: 5px solid #ff3333;
+  }
+
+.grid:hover {
+    border: 5px solid black;
+    background-color: #ff3333;
+}

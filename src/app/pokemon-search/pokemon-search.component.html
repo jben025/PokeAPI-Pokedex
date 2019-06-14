@@ -1,0 +1,15 @@
+<div id="search-component" class="search-interface">
+  <p class="search-title">
+    <b>Pokemon Search</b>
+    <br>
+    <input #search (NgModel)="query" id="search-box"  placeholder="Pokemon Name/ID" (keyup)="checkPokeTable(search.value)" (keyup.backspace)="checkPokeTable(search.value)">
+  </p>
+</div>
+
+<div class="grid" *ngIf="searchTable">
+    <div class="column" *ngFor="let pokemon of searchTable | search: query" [routerLink]="['/pokemon-detail', pokemon[0]]">
+
+      <p>No.{{pokemon[1]}}&nbsp;{{ pokemon[0] }}</p>
+      <img src="{{pokemon[2] != null && pokemon[2] || default_sprite}}" alt="" >
+    </div>
+  </div>

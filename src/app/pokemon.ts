@@ -26,3 +26,19 @@ export class Array {
 
     }
 }
+
+export class PokemonDetails{
+    name: string;
+    id: number;
+    sprites: Sprites
+
+}
+
+export class Sprites {
+    front_default: string;
+    constructor(
+        front_default: string
+    ) {
+        this.front_default = front_default;
+    }
+}

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,6 +11,8 @@ import { PokemonDashboardComponent } from './pokemon-dashboard/pokemon-dashboard
 import { AppRoutingModule } from './app-routing.module';
 import { PokemonImageComponent } from './pokemon-image/pokemon-image.component';
 import { PokemonPageComponent } from './pokemon-page/pokemon-page.component';
+import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PokemonPageComponent } from './pokemon-page/pokemon-page.component';
     PokemonDetailComponent,
     PokemonDashboardComponent,
     PokemonImageComponent,
-    PokemonPageComponent
+    PokemonPageComponent,
+    PokemonSearchComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

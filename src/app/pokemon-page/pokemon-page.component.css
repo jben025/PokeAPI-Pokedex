@@ -1,0 +1,32 @@
+
+.pagination{
+    text-align: center;
+    padding-top: 20px;
+} 
+
+li{
+    font-size: 25px;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 0px 10px 0px 10px;
+    font-family: "Calibri", Arial, monospace;
+    background-color: white;
+    border: 3px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline;
+  }
+  
+  li:hover{
+    color: black;
+    background-image: -webkit-linear-gradient(90deg, azure 30%, #ff3333 80%);
+    border: 3px solid #ff3333;
+  }
+
+  .disabled{
+    color: black;
+    background-color: white;
+    border: 3px solid #ff3333;
+    pointer-events: none;
+    opacity:0.5;
+  }

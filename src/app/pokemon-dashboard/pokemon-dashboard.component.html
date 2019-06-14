@@ -1,4 +1,6 @@
 
+<app-pokemon-search [offset]="offset"></app-pokemon-search>
+
 <div class="pokemon-view">
 	<div class="grid" *ngIf="pokemon">
 		<div class="column" *ngFor="let pokemon of pokemon.results ; let i = index" [attr.data-index]="i" [routerLink]="['/pokemon-detail', pokemon.name]">
@@ -8,10 +10,4 @@
 	</div>
 </div>
 
-<div>
-	<ul class="pagination">
-			<li *ngFor="let pokemon of pokemon.results ; let count = index" [attr.data-index]="count" ><a [routerLink]="['/pokemon-dashboard/page/', count+1]">{{count+1}}&nbsp;</a></li>
-	</ul>  
-</div>
-
-<app-pokemon-page [page_count]="pokemon.count" [curr_page]="page"></app-pokemon-page>
+<app-pokemon-page [offset]="offset"></app-pokemon-page>
